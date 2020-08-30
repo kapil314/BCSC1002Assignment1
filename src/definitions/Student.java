@@ -64,6 +64,7 @@ public class Student {
                 '}';
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -80,5 +81,35 @@ public class Student {
         int result = Objects.hash(studentName, universityRollNo, numberOfBooksIssuedByStudent);
         result = 31 * result + Arrays.hashCode(nameOfBooksIssuedByStudent);
         return result;
+    }
+
+    /**
+     * This method is used to issue the needed book.
+     *
+     * @param book
+     */
+
+    public void issueBook(Book book) {
+        System.out.println(book.getBookName() + "book has issued" + ".");
+    }
+
+    /**
+     * This method is used to return the issued book.
+     *
+     * @param bookName
+     */
+
+    public void returnPreviouslyIssuedBook(String bookName) {
+        System.out.println(bookName + "book hs been returned" + ".");
+    }
+
+    /**
+     * This method is used to show the list of bBooks available at the instant.
+     */
+    public void showAllBooks() {
+        nameOfBooksIssuedByStudent = new Book[10];
+        for (int count = 0; count < 10; count++) {
+            System.out.println("Book name" + (count + 1) + ".");
+        }
     }
 }
