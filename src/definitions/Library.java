@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Library {
     private Book[] currentlyAvailableBooks;
 
@@ -21,5 +23,10 @@ public class Library {
         this.currentlyAvailableBooks = currentlyAvailableBooks;
     }
 
-
+    @Override
+    public String toString() {
+        return "Library{" +
+                "currentlyAvailableBooks=" + Arrays.toString(currentlyAvailableBooks) +
+                '}';
+    }
 }
