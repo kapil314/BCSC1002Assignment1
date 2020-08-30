@@ -29,4 +29,17 @@ public class Library {
                 "currentlyAvailableBooks=" + Arrays.toString(currentlyAvailableBooks) +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Library library = (Library) o;
+        return Arrays.equals(currentlyAvailableBooks, library.currentlyAvailableBooks);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(currentlyAvailableBooks);
+    }
 }
