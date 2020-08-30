@@ -1,7 +1,7 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:49 PM
+ *  User: Kapil Jadaun
+ *  Date: 30/08/20
+ *  Time: 22:20
  *  File Name : Student.java
  * */
 package definitions;
@@ -14,6 +14,10 @@ public class Student {
     private long universityRollNo;
     private int numberOfBooksIssuedByStudent;
     private Book[] nameOfBooksIssuedByStudent;
+
+    public Student() {
+
+    }
 
     public String getStudentName() {
         return studentName;
