@@ -27,19 +27,26 @@ public class Book {
         this.bookAuthorName = bookAuthorName;
     }
 
-    public Book(String bookName, String bookAuthorName, String bookISBNumber) {
+    public Book(String bookName, String bookAuthorName, String bookISBNNumber) {
         this.bookName = bookName;
         this.bookAuthorName = bookAuthorName;
         this.bookISBNNumber = bookISBNNumber;
     }
 
-    public String getBookISBNumber() {
+    public String getBookISBNNumber() {
         return bookISBNNumber;
     }
 
-    public void setBookISBNumber(String bookISBNumber) {
-        this.bookISBNNumber = bookISBNumber;
+    public void setBookISBNNumber(String bookISBNNumber) {
+        this.bookISBNNumber = bookISBNNumber;
     }
 
-
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", bookAuthorName='" + bookAuthorName + '\'' +
+                ", bookISBNNumber='" + bookISBNNumber + '\'' +
+                '}';
+    }
 }
